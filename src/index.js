@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
-      }
+      },
       body: JSON.stringify({
-        "name": toy.name
-        ""
-      });
+        "name": toy.name,
+        "image": toy.image,
+      })
     });
   }
 });
