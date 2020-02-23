@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(function(response) {
       return response.json();
     }).then(function(object) {
-      
+      renderToys(object);
     });
   }
   
-  function renderToys() {
+  function renderToys(toy) {
     let h2 = document.createElement("h2");
     h2.innerText = object.name;
     
