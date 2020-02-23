@@ -12,4 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
       toyForm.style.display = "none";
     }
   });
+  
+  function getToys()
 });
