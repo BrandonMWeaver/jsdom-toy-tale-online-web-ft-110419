@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function postToy(toy) {
     return fetch("http://localhost:3000/toys", {
-      
+      method: "POST",
+      headers: {
+        
+      }
     });
   }
 });
