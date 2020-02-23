@@ -34,21 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(function(response) {
       return response.json();
     }).then(function(object) {
-      let h2 = document.createElement('h2')
-      h2.innerText = toy.name
+      let h2 = document.createElement("h2");
+      h2.innerText = object.name;
       
-      let img = document.createElement('img')
-      img.setAttribute('src', toy.image)
-      img.setAttribute('class', 'toy-avatar')
+      let img = document.createElement("img");
+      img.setAttribute("src", object.image);
+      img.setAttribute("class", "toy-avatar");
       
-      let p = document.createElement('p')
-      p.innerText = `${toy.likes} likes`
+      let p = document.createElement("p");
+      p.innerText = `${toy.likes} likes`;
       
-      let btn = document.createElement('button')
-      btn.setAttribute('class', 'like-btn')
-      btn.setAttribute('id', toy.id)
-      btn.innerText = "like"
-      btn.addEventListener('click', function(event) {
+      let btn = document.createElement("button");
+      btn.setAttribute("class", "like-btn");
+      btn.setAttribute("id", toy.id);
+      btn.innerText = "like";
+      btn.addEventListener("click", function(event) {
         console.log(event.target.dataset);
         likes(event);
       });
