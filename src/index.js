@@ -19,5 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
-  function postToy(toy)
+  function postToy(toy) {
+    
+  }
 });
