@@ -19,5 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
-  function postToy()
+  function postToy(toy)
 });
