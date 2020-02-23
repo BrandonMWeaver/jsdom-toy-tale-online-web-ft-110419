@@ -34,29 +34,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(function(response) {
       return response.json();
     }).then(function(object) {
-      let h2 = document.createElement("h2");
-      h2.innerText = object.name;
       
-      let img = document.createElement("img");
-      img.setAttribute("src", object.image);
-      img.setAttribute("class", "toy-avatar");
-      
-      let p = document.createElement("p");
-      p.innerText = `${object.likes} likes`;
-      
-      let btn = document.createElement("button");
-      btn.setAttribute("class", "like-btn");
-      btn.setAttribute("id", object.id);
-      btn.innerText = "like";
-      btn.addEventListener("click", function(event) {
-        console.log(event.target.dataset);
-        likes(event);
-      });
-      
-      let divCard = document.createElement("div");
-      divCard.setAttribute("class", "card");
-      divCard.append(h2, img, p, btn);
-      document.getElementById("toy-collection").append(divCard);
     });
   }
+  
+  function renderToys() {
+    let h2 = document.createElement("h2");
+    h2.innerText = object.name;
+    
+    let img = document.createElement("img");
+    img.setAttribute("src", object.image);
+    img.setAttribute("class", "toy-avatar");
+    
+    let p = document.createElement("p");
+    p.innerText = `${object.likes} likes`;
+    
+    let btn = document.createElement("button");
+    btn.setAttribute("class", "like-btn");
+    btn.setAttribute("id", object.id);
+    btn.innerText = "like";
+    btn.addEventListener("click", function(event) {
+      console.log(event.target.dataset);
+      likes(event);
+    });
+    
+    let divCard = document.createElement("div");
+    divCard.setAttribute("class", "card");
+    divCard.append(h2, img, p, btn);
+    document.getElementById("toy-collection").append(divCard);
+  }
+  
+  getToys().then(function(toys) {
+    toys.forEach(function(toy) {
+      renderToys(toy);
+    });
+  });
 });
