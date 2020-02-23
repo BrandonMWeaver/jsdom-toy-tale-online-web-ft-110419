@@ -42,11 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
       img.setAttribute("class", "toy-avatar");
       
       let p = document.createElement("p");
-      p.innerText = `${toy.likes} likes`;
+      p.innerText = `${object.likes} likes`;
       
       let btn = document.createElement("button");
       btn.setAttribute("class", "like-btn");
-      btn.setAttribute("id", toy.id);
+      btn.setAttribute("id", object.id);
       btn.innerText = "like";
       btn.addEventListener("click", function(event) {
         console.log(event.target.dataset);
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let divCard = document.createElement("div");
       divCard.setAttribute("class", "card");
       divCard.append(h2, img, p, btn);
-      divCollect.append(divCard);
+      document.querySelector().append(divCard);
     });
   }
 });
