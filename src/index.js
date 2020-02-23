@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify({
         "name": toy.name,
         "image": toy.image,
+        "likes": 0
       })
     });
   }
