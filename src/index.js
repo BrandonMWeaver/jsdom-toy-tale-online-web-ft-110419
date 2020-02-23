@@ -64,6 +64,26 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("toy-collection").append(divCard);
   }
   
+  function likes(e) {
+    e.preventDefault();
+    let more = parseInt(e.target.previousElementSibling.innerText) + 1;
+    
+    fetch(`http://localhost:3000/toys/${e.target.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        "likes": more
+      })
+    }).then(function(result) {
+      return result.json();
+    }).then(function(like_obj) {
+      e.target.previousElementSibling.innerText = `${more} likes`;
+    });
+  }
+  
   getToys().then(function(toys) {
     toys.forEach(function(toy) {
       renderToys(toy);
