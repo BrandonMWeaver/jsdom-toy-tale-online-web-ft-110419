@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   function getToys() {
-    return fetch
+    return fetch("http://")
   }
 });
