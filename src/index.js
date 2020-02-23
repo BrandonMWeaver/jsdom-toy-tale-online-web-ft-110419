@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "image": toy.image,
         "likes": 0
       })
+    }).then(function(response) {
+      return response.json();
     });
   }
 });
