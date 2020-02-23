@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let divCard = document.createElement("div");
       divCard.setAttribute("class", "card");
       divCard.append(h2, img, p, btn);
-      document.getElementById("toy").append(divCard);
+      document.getElementById("toy-collection").append(divCard);
     });
   }
 });
