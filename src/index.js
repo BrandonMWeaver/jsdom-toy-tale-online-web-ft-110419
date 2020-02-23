@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Accept": "application/json"
       }
       body: JSON.stringify({
-        
+        "name": toy.name
+        ""
       });
     });
   }
